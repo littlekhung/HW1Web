@@ -76,7 +76,7 @@
                 <button type="button" style="width:100px; background-color:#3C3D3B" class="btn btn-dark" onclick="generate()">Generate</button>
             </div>
             <div class="col-6"><br>
-                <div class="container" id="output">table</div>
+                <div class="container" id="output"></div>
             </div>
             <br>
         </div>
@@ -86,6 +86,7 @@
     </div>
     <script>
         function generate() {
+            var flag=false;
             var table = document.getElementById('output');
             table.innerHTML = '';
             table.style = 'border: 1px solid #3C3D3B;';
@@ -99,6 +100,7 @@
                     td.style='border: 1px solid #3C3D3B;';
                     if (num < 10000) {
                         if (check1(num) && check2(num)) {
+                            flag=true;
                             td.innerText = num;
                             tr.appendChild(td);
                         }
@@ -108,6 +110,8 @@
                         tr.appendChild(td);
                 }
                 table.appendChild(tr);
+                if(!flag)
+                    table.innerHTML = 'None of Number Matched!!!';
             }
         }
         function check1(num) {

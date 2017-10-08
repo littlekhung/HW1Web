@@ -85,7 +85,19 @@
         </div>
     </div>
     <script>
+        var checked1,checked2;
+        function getCheck(){
+            checkbox1 = Array.from(document.getElementsByName('check'));
+            checkbox2 = Array.from(document.getElementsByName('check2'));
+            checked1 = checkbox1.filter(function (item){
+                return item.checked;
+            });
+            checked1 = checkbox2.filter(function (item){
+                return item.checked;
+            });
+        }
         function generate() {
+            getCheck();
             var flag=false;
             var table = document.getElementById('output');
             table.innerHTML = '';
@@ -94,7 +106,8 @@
             while (num < 10000) {
                 var tr = document.createElement('div');
                 tr.className='row';
-                for (var col = 0; col < 5; col++) {
+                var col=0;
+                while(col<5){
                     var td = document.createElement('div');
                     td.className='col';
                     td.style='border: 1px solid #3C3D3B;';
@@ -103,11 +116,13 @@
                             flag=true;
                             td.innerText = num;
                             tr.appendChild(td);
+                            col++;
                         }
                         num++;
                     }
                     else
-                        tr.appendChild(td);
+                        col++;
+                    
                 }
                 table.appendChild(tr);
                 if(!flag)

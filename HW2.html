@@ -1,3 +1,5 @@
+<!--Noppadol Assavakamhaenghan Section 1 5988065-->
+<!--This webpage need bootstrap to display correctly!!!-->
 <html>
 
 <head>
@@ -9,22 +11,29 @@
 
 <body>
     <div align="center">Noppadol Assavakamhaenghan Section 1 5988065</div>
+    <!--box of program-->
     <div class="container" align="center" style="border-radius: 25px;border: 2px solid #3C3D3B; background-color:#F8C674;">
+        <!--Head-->
         <div class="row justify-content-md-center">
             <div class="col-7" style="font-weight: bold;font-size: 200%; background-color:#3C3D3B; border-radius: 50px; color: white;">Car Registration Plate Generator</div>
         </div>
         <br>
+        <!--label input and output-->
         <div class="row">
             <div class="col-6" style="font-size: 150%;border-right: solid #3C3D3B;">Input</div>
             <div class="col-6" style="font-size: 150%;">Output</div>
         </div>
+        <!--row of input and output-->
         <div class="row">
+            <!--left part of box which is input-->
             <div class="col-6" style="border-right: solid #3C3D3B;">
+                <!--first set of input for unwanted number-->
                 <div class="container">
                     <br>
                     <div class="row">
                         <div class="col">1. Unwanted Number in License Plate</div>
                     </div>
+                    <!--all checkboxs used for unwanted number (use name as check for DOM)-->
                     <div class="row justify-content-md-center">
                         <div class="col-3"><input type="checkbox" name="check" value="0"> 0</div>
                         <div class="col-3"><input type="checkbox" name="check" value="1"> 1</div>
@@ -46,11 +55,13 @@
                         <div class="col-3"><input type="checkbox" name="check" value="9"> 9</div>
                     </div>
                 </div>
+                <!--Secon set of input for unwanted summation-->
                 <div class="container">
                     <br>
                     <div class="row">
                         <div class="col">1. Unwanted summation of all digits</div>
                     </div>
+                    <!--all checkboxs used for unwanted summation (use name as check2 for DOM)-->
                     <div class="row justify-content-md-center">
                         <div class="col-3"><input type="checkbox" name="check2" value="0"> 0</div>
                         <div class="col-3"><input type="checkbox" name="check2" value="1"> 1</div>
@@ -73,69 +84,116 @@
                     </div>
                 </div>
                 <br>
+                <!--button click for generate output-->
                 <button type="button" style="width:100px; background-color:#3C3D3B" class="btn btn-dark" onclick="generate()">Generate</button>
             </div>
+            <!--output table-->
             <div class="col-6"><br>
+                <!--output will be here when generate() called (use id as output for DOM)-->
                 <div class="container" id="output"></div>
             </div>
             <br>
         </div>
+        <!--juse an empty row for better webpage look-->
         <div class="row">
             <div class="col"><br></div>
         </div>
     </div>
     <script>
+        // global variable used for storing the check numbers in each set
         var checked1,checked2;
+        // function used for gathering input from both set
         function getCheck(){
+            // get both array of checkbox
             checkbox1 = Array.from(document.getElementsByName('check'));
             checkbox2 = Array.from(document.getElementsByName('check2'));
+            // use filter to get array of checked checkboxes
             checked1 = checkbox1.filter(function (item){
                 return item.checked;
             });
-            checked1 = checkbox2.filter(function (item){
+            checked2 = checkbox2.filter(function (item){
                 return item.checked;
             });
         }
+        // main function which is used for generate output
         function generate() {
+            // get all checked checkboxes
             getCheck();
+            // flag used in case there is none of number matched the criteria
             var flag=false;
+            // get output box and store in table
             var table = document.getElementById('output');
+            //set output to be empty (clear)
             table.innerHTML = '';
             table.style = 'border: 1px solid #3C3D3B;';
+            // looping number from 1 to 9999
             var num = 1;
             while (num < 10000) {
+                // create row
                 var tr = document.createElement('div');
                 tr.className='row';
                 var col=0;
+                // loop for creating 5 col in each row
                 while(col<5){
+                    // create col
                     var td = document.createElement('div');
                     td.className='col';
                     td.style='border: 1px solid #3C3D3B;';
+                    //if number still less than 10000 check whether it match the criteria or not
                     if (num < 10000) {
                         if (check1(num) && check2(num)) {
+                            // if at least one number match the criteria set flag as true (mean that there is at least a number in output)
                             flag=true;
+                            // set the inner text of the col as number
                             td.innerText = num;
+                            // put col in rol
                             tr.appendChild(td);
                             col++;
                         }
+                        // increase number by 1
                         num++;
                     }
+                    // if number is more than 10000 just increse col by 1 but not add it to the row (used for the last row of output)
                     else
                         col++;
                     
                 }
+                // add row to the table
                 table.appendChild(tr);
+                // if none of numbers is match the criteria
                 if(!flag)
                     table.innerHTML = 'None of Number Matched!!!';
             }
         }
+        // check whether number first criteria
         function check1(num) {
+            // change num to string so we can use indexOf function
+            num+='';
+            // loop all checked number whether the num contain those checked number or not if contain return false
+            for(var i =0;i<checked1.length;i++)
+                if(num.indexOf(checked1[i].value)!=-1)
+                    return false;
             return true;
         }
+        // check whether number second criteria 
         function check2(num) {
+            // find summation of all number
+            var sum =0;
+            while(num!=0){
+                sum+=num%10;
+                num=parseInt(num/10);
+            }
+            // if the summation still not 1 digit sum first and second digit until summation is 1 digit
+            while(parseInt(sum/10)!=0)
+                sum=parseInt(sum%10+sum/10);
+            // check if the summation is equal to checked number in second set of not if it is return false
+            for(var i =0;i<checked2.length;i++)
+                if(checked2[i].value==sum)
+                    return false;
             return true;
         }
     </script>
+    <!--Bootstrap stuff-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"

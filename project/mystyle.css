@@ -3,6 +3,7 @@ div.praiseBox{
     border: 2px black solid;
     padding: 20px 20px 20px 20px;
     border-radius: 20px;
+    background-color: wheat;
 }
 body{
     padding-top: 75px;

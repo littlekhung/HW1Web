@@ -2,3 +2,10 @@
     width: 200px;
     height: 100px;
 }
+div.praiseBox{
+    border: 2px black solid;
+    padding-left: 20px;
+}
+body{
+    background-color: #93E1F1;
+}

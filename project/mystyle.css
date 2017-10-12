@@ -1,7 +1,4 @@
-.bigger{
-    width: 200px;
-    height: 100px;
-}
+
 div.praiseBox{
     border: 2px black solid;
     padding: 20px 20px 20px 20px;
@@ -10,4 +7,10 @@ div.praiseBox{
 body{
     padding-top: 75px;
     background-color: #93E1F1;
+}
+img.tran{
+    transition: all 500ms;
+}
+img:hover.tran{
+    transform: scale(1.5);
 }

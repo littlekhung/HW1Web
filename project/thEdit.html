@@ -9,10 +9,18 @@
         a {
             color: black;
         }
+
+        .li {
+            height: auto;
+        }
+
+        .list-group-item {
+            height: 2.2em;
+        }
     </style>
 </head>
 
-<body style="position:relative">
+<body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="main.html">Web Style Guide</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler"
@@ -37,53 +45,31 @@
             </ul>
         </div>
     </nav>
-
-    <div style="position: fixed; padding-left: 1rem; border: 1px solid black; border-radius:20px; background-color:bisque;">
-
-        <h3>Chapters</h3>
-
-        <ul style="padding-right: 2rem;">
-            <li>
-                <a href="#chap1">1 Process</a>
-            </li>
-            <li>
-                <a href="#chap2">2 Universal Usability</a>
-            </li>
-            <li>
-                <a href="#chap3">3 Information Architecture</a>
-            </li>
-            <li>
-                <a href="#chap4">4 Interface Design</a>
-            </li>
-            <li>
-                <a href="#chap5">5 Site Structure</a>
-            </li>
-            <li>
-                <a href="#chap6">6 Page Structure</a>
-            </li>
-            <li>
-                <a href="#chap7">7 Page Design</a>
-            </li>
-            <li>
-                <a href="#chap8">8 Typography</a>
-            </li>
-            <li>
-                <a href="#chap9">9 Editorial Style</a>
-            </li>
-            <li>
-                <a href="#chap10">10 Forms and Applications</a>
-            </li>
-            <li>
-                <a href="#chap11">11 Graphics</a>
-            </li>
-            <li>
-                <a href="#chap12">12 Multimedia</a>
-            </li>
-        </ul>
+    <div style="position:fixed; top:4rem;" id="list-example" class="list-group">
+        <center>
+            <h3>Chapter</h3>
+        </center>
+        <a class="list-group-item list-group-item-action" href="#list-item-1">1 Process</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-2">2 Universal Usability</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-3">3 Information Architecture</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-4">4 Interface Design</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-5">5 Site Structure</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-6">6 Page Structure</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-7">7 Page Design</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-8">8 Typography</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-9">9 Editorial Style</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-10">10 Forms and Applications</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-11">11 Graphics</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-12">12 Multimedia</a>
+        <a class="list-group-item list-group-item-action" href="http://webstyleguide.com/wsg3/13-back-matter/index.html">References</a>
+        <a class="list-group-item list-group-item-action" href="http://webstyleguide.com/wsg3/13-back-matter/abbreviations.html">Abbreviations</a>
     </div>
-    <div style="padding-left: 12rem;" class="container">
-        <div class="container" id="chap1">
+
+    <div style="left:8rem; border: 1px black solid;position: relative; overflow-y: scroll; width: 65rem; height: 31rem;" data-spy="scroll"
+        data-target="#list-example" data-offset="0" class=" container scrollspy-example">
+        <div class="container li" id="list-item-1">
             <h1>1 Process</h1>
+
             <blockquote>It didn’t take long for the commercial Web’s pioneers to learn that the slogan “If you build it, they will come“
                 was a hollow joke: You have to build it well, thoughtfully and ambitiously and inventively, and then you
                 have to keep rethinking it and rebuilding it, if you have any hope of attracting a crowd.
@@ -96,14 +82,42 @@
                 team.
             </p>
 
-            <p style="margin-bottom: 30px;">Planning a web site is a two-part process: first you gather your development team, analyze your needs and goals,
+            <p>Planning a web site is a two-part process: first you gather your development team, analyze your needs and goals,
                 and work through the development process outlined here to refine your plans. Next you create a project charter
                 document that details what you intend to do and why, what technology and content you’ll need, how long the
                 process will take, what you will spend to do it, and how you will assess the results of your efforts. The
                 project charter document is crucial to creating a successful site: it is both the blueprint for your process
                 and the touchstone you’ll use to keep the project focused on the agreed-on goals and deliverables.</p>
+            <h3>Chapter contents</h3>
+            <ul>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/1-process/2-development-team.html">The Site Development Team</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/1-process/3-web-teams.html">Sidebar: Web Teams</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/1-process/4-initial-planning.html">Initial Planning</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/1-process/5-list-of-reminders.html">Sidebar: A List of Reminders</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/1-process/6-types-of-sites.html">Types of Web Sites and Documents</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/1-process/7-development-process.html">The Site Development Process</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/1-process/8-project-charter.html">Developing a Project Charter</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/1-process/9-general-advice.html">General Advice About Web Projects</a>
+                </li>
+            </ul>
         </div>
-        <div class="container" id="chap2">
+        <br>
+        <div class="container li" id="list-item-2">
             <h1>2 Universal Usability</h1>
 
             <blockquote>
@@ -123,218 +137,484 @@
 
             <p>Here we cover the concepts, principles, and processes for universal usability. Specific techniques for universal
                 usability are woven into context in the chapters that follow.</p>
+            <h3>Chapter contents</h3>
+            <ul>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/2-universal-usability/2-basis.html">A Basis for Universal Usability</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/2-universal-usability/3-universal-design.html">Sidebar: Universal Design Principles</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/2-universal-usability/4-guidelines.html">Universal Usability Guidelines</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/2-universal-usability/5-in-design-process.html">Universal Usability in the Design Process</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/2-universal-usability/6-development-cycle.html">Sidebar: The Development Cycle</a>
+                </li>
+            </ul>
         </div>
-        <div class="container" id="chap3">
-            <h1>2 Universal Usability</h1>
+        <br>
+        <div class="container li" id="list-item-3">
+            <h1>3 Information Architecture</h1>
 
-            <blockquote>
-                To err is human, to forgive—design.
-                <br> —Andrew Dillon
+            <blockquote>Design informs even the simplest structure, whether of brick and steel or prose.
+                <br> —
+                <a href="http://en.wikipedia.org/wiki/E._B._White">E. B. White</a>
             </blockquote>
 
-            <p>Usability is a measure of effectiveness. It describes how effective tools and information sources are in helping
-                us accomplish tasks. The more usable the tool, the better we are able to achieve our goals. Many tools help
-                us overcome physical limitations by making us stronger, faster, and more sharp-sighted. But tools can be
-                frustrating or even disabling. When we encounter a tool that we cannot work with, either because it is poorly
-                designed or because its design does not take into account our needs, we are limited in what we can accomplish.</p>
+            <p>In the context of web site design, information architecture describes the overall conceptual models and general
+                designs used to plan, structure, and assemble a site. Every web site has an information architecture, but
+                information architecture techniques are particularly important to large, complex web sites, where the primary
+                aims are to:</p>
 
-            <p>In designing web sites our job is to reduce functional limitations through design. When we aim for
-                <em>universal</em> usability, we improve the quality of life for more people more of the time. On the web, we
-                can work toward universal usability by adopting a universal design approach to usability.</p>
+            <ul>
+                <li>Organize the site content into taxonomies and hierarchies of information;</li>
+                <li>Communicate conceptual overviews and the overall site organization to the design team and clients;</li>
+                <li>Research and design the core site navigation concepts;</li>
+                <li>Set standards and specifications for the handling of
+                    <span class="smallcaps">html</span> semantic markup, and the format and handling of text content; and</li>
+                <li>Design and implement search optimization standards and strategies.</li>
+            </ul>
 
-            <p>Here we cover the concepts, principles, and processes for universal usability. Specific techniques for universal
-                usability are woven into context in the chapters that follow.</p>
+            <p>Information architecture encompasses a broad range of design and planning disciplines, and the boundaries among
+                information architecture, technical design, user interface, and graphic design are necessarily blurred by
+                the need for all of these communities of practice to cooperate to produce a cohesive, coherent, and consistent
+                experience for the site user. Architecture is an appropriate metaphor for the assembling of complex multidimensional
+                information spaces shared by many different users and readers, where the underlying structure of information
+                must first be framed out before more specific disciplines such as interface and graphic design can operate
+                effectively. The user interface and visual design of the site may be much more visible to the user initially,
+                but if the underlying organization of the site and its content is poorly constructed, visual or interactive
+                design will not fix the problems.</p>
+
+            <p>In large web projects the role of information architect will probably be filled by an individual with long experience
+                in organizing and presenting information, particularly in the context of the web. However, in many projects
+                the information architecture of the site will become a joint project among the design, editorial, and technical
+                teams. Regardless of how the role is filled, the information architecture tasks form the crucial planning
+                bridge between your general discussions of site goals and audiences and the specific design, user interface,
+                and technical solutions you’ll use in the finished site designs.</p>
+            <h3>Chapter contents</h3>
+            <ul>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/3-information-architecture/2-organizing-information.html">Organizing Your Information</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/3-information-architecture/3-site-structure.html">Site Structure</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/3-information-architecture/4-presenting-information.html">Presenting Information Architecture</a>
+                </li>
+            </ul>
         </div>
-        <div class="container" id="chap4">
-            <h1>2 Universal Usability</h1>
+        <br>
+        <div class="container li" id="list-item-4">
+            <h1>4 Interface Design</h1>
 
-            <blockquote>
-                To err is human, to forgive—design.
-                <br> —Andrew Dillon
+            <blockquote>Navigation isn’t just a
+                <em>feature</em> of a web site, it
+                <em>is</em> the web site, in the same way that the building, the shelves, and the cash registers
+                <em>are</em> Sears. Without it, there’s no
+                <em>there</em> there.
+                <br> —
+                <a href="http://en.wikipedia.org/wiki/Don%27t_Make_Me_Think">Steve Krug</a>
             </blockquote>
 
-            <p>Usability is a measure of effectiveness. It describes how effective tools and information sources are in helping
-                us accomplish tasks. The more usable the tool, the better we are able to achieve our goals. Many tools help
-                us overcome physical limitations by making us stronger, faster, and more sharp-sighted. But tools can be
-                frustrating or even disabling. When we encounter a tool that we cannot work with, either because it is poorly
-                designed or because its design does not take into account our needs, we are limited in what we can accomplish.</p>
+            <p>Users of web documents don’t just look at information, they interact with it in novel ways that have no precedents
+                in paper document design; therefore, web designers must be versed in the art and science of interface design.
+                The graphic user interface (
+                <span class="smallcaps">gui</span>) of a computer system comprises the interaction metaphors, images, and concepts used to convey
+                function and meaning on the computer screen. It also includes the detailed visual characteristics of every
+                component of the graphic interface and the functional sequence of interactions over time that produce the
+                characteristic look and feel of web pages. Graphic design and visual “signature” graphics are not used simply
+                to enliven web pages—graphics are integral to the user’s experience with your site. In interactive documents,
+                graphic design cannot be separated from issues of interface design.</p>
+            <h3>Chapter contents</h3>
 
-            <p>In designing web sites our job is to reduce functional limitations through design. When we aim for
-                <em>universal</em> usability, we improve the quality of life for more people more of the time. On the web, we
-                can work toward universal usability by adopting a universal design approach to usability.</p>
-
-            <p>Here we cover the concepts, principles, and processes for universal usability. Specific techniques for universal
-                usability are woven into context in the chapters that follow.</p>
+            <ul>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/4-interface-design/2-navigation.html">Navigation and Wayfinding</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/4-interface-design/3-interface-design.html">Interface Design</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/4-interface-design/4-information-design.html">Information Design</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/4-interface-design/5-enterprise-interface.html">The Enterprise Interface</a>
+                </li>
+            </ul>
         </div>
-        <div class="container" id="chap5">
-            <h1>2 Universal Usability</h1>
+        <br>
+        <div class="container li" id="list-item-5">
+            <h1>5 Site Structure</h1>
 
             <blockquote>
-                To err is human, to forgive—design.
-                <br> —Andrew Dillon
+                Design is not just what it looks like and feels like. Design is how it works.
+                <br> —
+                <a href="http://en.wikipedia.org/wiki/Steve_jobs">Steve Jobs</a>
             </blockquote>
 
-            <p>Usability is a measure of effectiveness. It describes how effective tools and information sources are in helping
-                us accomplish tasks. The more usable the tool, the better we are able to achieve our goals. Many tools help
-                us overcome physical limitations by making us stronger, faster, and more sharp-sighted. But tools can be
-                frustrating or even disabling. When we encounter a tool that we cannot work with, either because it is poorly
-                designed or because its design does not take into account our needs, we are limited in what we can accomplish.</p>
+            <p>Much as foundational concrete and piles define the stability and longevity of buildings, so the structural underpinnings
+                of web sites affect their success in ways that, though not visible on the surface, are ultimately far more
+                important than color and typography. Site structure determines how well sites work in the broader context
+                of the web. </p>
 
-            <p>In designing web sites our job is to reduce functional limitations through design. When we aim for
-                <em>universal</em> usability, we improve the quality of life for more people more of the time. On the web, we
-                can work toward universal usability by adopting a universal design approach to usability.</p>
+            <p>The methods you use to mark up pages determine whether they can be read well by software and indexed well by
+                search engines. The logic and stability of the underlying files and directories that your web site rests
+                on affect its functionality, as well as its potential for growth and expansion. </p>
 
-            <p>Here we cover the concepts, principles, and processes for universal usability. Specific techniques for universal
-                usability are woven into context in the chapters that follow.</p>
+            <p>Attention to these behind-the-scenes structural components from the start produces a web site that will hold
+                up over time, work effectively within the larger web environment, and adapt and grow as needed.</p>
+            <h3>Chapter contents</h3>
+
+            <ul>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/5-site-structure/2-semantic-markup.html">Semantic Content Markup</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/5-site-structure/3-site-file-structure.html">Site File Structure</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/5-site-structure/4-search-engine-optimization.html">Search Engine Optimization</a>
+                </li>
+            </ul>
         </div>
-        <div class="container" id="chap6">
-            <h1>2 Universal Usability</h1>
+        <br>
+        <div class="container li" id="list-item-6">
+            <h1>6 Page Structure</h1>
 
             <blockquote>
-                To err is human, to forgive—design.
-                <br> —Andrew Dillon
+                The experienced web designer, like the talented newspaper art director, accepts that many projects she works on will have
+                headers and columns and footers. Her job is not to whine about emerging commonalities but to use them to
+                create pages that are distinctive, natural, brand-appropriate, subtly memorable, and quietly but unmistakably
+                engaging.
+                <br> —
+                <a href="http://en.wikipedia.org/wiki/Jeffrey_Zeldman">Jeffrey Zeldman</a>
             </blockquote>
 
-            <p>Usability is a measure of effectiveness. It describes how effective tools and information sources are in helping
-                us accomplish tasks. The more usable the tool, the better we are able to achieve our goals. Many tools help
-                us overcome physical limitations by making us stronger, faster, and more sharp-sighted. But tools can be
-                frustrating or even disabling. When we encounter a tool that we cannot work with, either because it is poorly
-                designed or because its design does not take into account our needs, we are limited in what we can accomplish.</p>
+            <p>Book design and print typography are ancient and well-respected design disciplines. Both have a long tradition
+                of creativity within the tight boundaries of our expectations for the form of books, page layout, letterform
+                design, typography, and the harmonious confluence of visual design and content that characterizes the best
+                print design. These deeply creative and intellectually demanding crafts are not hobbled by the 950 pages
+                of rules and conventions in
+                <cite>The Chicago Manual of Style</cite>. </p>
 
-            <p>In designing web sites our job is to reduce functional limitations through design. When we aim for
-                <em>universal</em> usability, we improve the quality of life for more people more of the time. On the web, we
-                can work toward universal usability by adopting a universal design approach to usability.</p>
+            <p>Book design, typography, and the larger world of print publishing are
+                <em>enabled</em> by established conventions and standards for print publication. With “web standards” methods
+                for building sites, with carefully validated and universally accessible
+                <span class="smallcaps">xhtml</span> and
+                <span class="smallcaps">css</span>, we now have excellent technical standards. Unfortunately we’re still in an awkward, adolescent
+                stage for web publishing, editorial, and design standards, but clear patterns and user expectations are emerging
+                from the chaos.</p>
 
-            <p>Here we cover the concepts, principles, and processes for universal usability. Specific techniques for universal
-                usability are woven into context in the chapters that follow.</p>
+            <p>It may seem odd to start a chapter on “design” with a plea for standards, rules, and conventions, but often site
+                projects founder in the design stage because the larger norms of traditional publishing, editorial standards,
+                and institutional practices are ignored in the pursuit of graphic, technical, or interactive eccentricities.
+                “Prefer the standard to the offbeat.” Take this timeless advice from William Strunk and E. B. White, and
+                save your creative chops for the
+                <em>real</em> work of developing interesting content.</p>
+            <h3>Chapter contents</h3>
+
+            <ul>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/6-page-structure/2-design-context.html">Site Design in Context</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/6-page-structure/3-site-design.html">Page Structure and Site Design</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/6-page-structure/4-page-templates.html">Page Templates</a>
+                </li>
+            </ul>
         </div>
-        <div class="container" id="chap7">
-            <h1>2 Universal Usability</h1>
+        <br>
+        <div class="container li" id="list-item-7">
+
+            <h1>7 Page Design</h1>
 
             <blockquote>
-                To err is human, to forgive—design.
-                <br> —Andrew Dillon
+                Simplicity is not the goal. It is the by-product of a good idea and modest expectations.
+                <br> —
+                <a href="http://en.wikipedia.org/wiki/Paul_Rand">Paul Rand</a>
             </blockquote>
 
-            <p>Usability is a measure of effectiveness. It describes how effective tools and information sources are in helping
-                us accomplish tasks. The more usable the tool, the better we are able to achieve our goals. Many tools help
-                us overcome physical limitations by making us stronger, faster, and more sharp-sighted. But tools can be
-                frustrating or even disabling. When we encounter a tool that we cannot work with, either because it is poorly
-                designed or because its design does not take into account our needs, we are limited in what we can accomplish.</p>
 
-            <p>In designing web sites our job is to reduce functional limitations through design. When we aim for
-                <em>universal</em> usability, we improve the quality of life for more people more of the time. On the web, we
-                can work toward universal usability by adopting a universal design approach to usability.</p>
+            <p>We seek clarity, order, and trustworthiness in information sources, whether traditional paper documents or web
+                pages. Effective page design can provide this confidence. The spatial organization of graphics and text on
+                the web page can engage users with graphic impact, direct their attention, prioritize the information they
+                see, and make their interactions with your web site more enjoyable and efficient.</p>
 
-            <p>Here we cover the concepts, principles, and processes for universal usability. Specific techniques for universal
-                usability are woven into context in the chapters that follow.</p>
+            <p>Design creates visual logic and seeks an optimal balance between visual sensation and graphic information. Without
+                the visual impact of shape, color, and contrast, pages are graphically uninteresting and will not motivate
+                the viewer. Dense text documents without contrast and visual relief are also hard to read, particularly on
+                low-resolution screens. But without the depth and complexity of text, highly graphic pages risk disappointing
+                the user by offering a poor balance of visual sensation, text information, and interaction. In seeking the
+                ideal balance, the primary constraints for page design are the limitations of the web medium, the diversity
+                of individuals and technologies accessing web pages, and access speeds ranging from slow modems to high-speed
+                wired and wireless connections.</p>
+
+            <p>Visual and functional continuity in your web site organization, graphic design, and typography are essential
+                to convince your audience that your web site offers them timely, accurate, and useful information. A careful,
+                systematic approach to page design can simplify navigation, reduce user errors, and make it easier for users
+                to take advantage of the information and features of the site. But given the wide and diverse range of contexts
+                that make up the experience of the web, the starting point for web page design begins under the surface of
+                the page, with the structure of the underlying code.</p>
+
+            <h3>Chapter contents</h3>
+
+            <ul>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/7-page-design/2-document-design.html">Document Design</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/7-page-design/3-visual-design.html">Visual Design</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/7-page-design/4-visual-design-principles.html">Sidebar: Visual Design Principles</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/7-page-design/5-page-frameworks.html">Page Frameworks</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/7-page-design/6-page-width-line-length.html">Page Width and Line Length</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/7-page-design/7-design-grids.html">Design Grids for Web Pages</a>
+                </li>
+            </ul>
         </div>
-        <div class="container" id="chap8">
-            <h1>2 Universal Usability</h1>
+        <br>
+        <div class="container li" id="list-item-8">
+            <h1>8 Typography</h1>
+
+            <blockquote>Typography exists to honor content.
+                <br> —
+                <a href="http://en.wikipedia.org/wiki/Robert_Bringhurst">Robert Bringhurst</a>
+            </blockquote>
+
+
+            <p>Typography is the balance and interplay of letterforms on the page—a verbal and visual equation that helps the
+                reader understand the form and absorb the substance of the page content. Typography plays a dual role as
+                both verbal and visual communication. When readers scan a page they are subconsciously aware of both functions:
+                first they survey the overall graphic patterns of the page, and then they parse the language and read. </p>
+
+            <p>Good typography establishes a visual hierarchy for rendering prose on the page by providing visual punctuation
+                and graphic accents that help readers understand relations between prose and pictures, headlines and subordinate
+                blocks of text.</p>
+
+            <h3>Chapter contents</h3>
+
+            <ul>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/8-typography/2-characteristics-of-web.html">Characteristics of Type on the Web</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/8-typography/3-legibility.html">Legibility</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/8-typography/4-web-typefaces.html">Typefaces</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/8-typography/5-typographic-emphasis.html">Emphasis</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/8-typography/6-display-typography.html">Display Typography with Graphics</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/8-typography/7-signal-to-noise-ratio.html">Sidebar: Signal to Noise Ratio</a>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <div class="container li" id="list-item-9">
+            <h1>9 Editorial Style</h1>
 
             <blockquote>
-                To err is human, to forgive—design.
-                <br> —Andrew Dillon
+                How do I know what I think until I see what I say?
+                <br> —
+                <a href="http://en.wikipedia.org/wiki/E._M._Forster">E. M. Forster</a>
             </blockquote>
 
-            <p>Usability is a measure of effectiveness. It describes how effective tools and information sources are in helping
-                us accomplish tasks. The more usable the tool, the better we are able to achieve our goals. Many tools help
-                us overcome physical limitations by making us stronger, faster, and more sharp-sighted. But tools can be
-                frustrating or even disabling. When we encounter a tool that we cannot work with, either because it is poorly
-                designed or because its design does not take into account our needs, we are limited in what we can accomplish.</p>
 
-            <p>In designing web sites our job is to reduce functional limitations through design. When we aim for
-                <em>universal</em> usability, we improve the quality of life for more people more of the time. On the web, we
-                can work toward universal usability by adopting a universal design approach to usability.</p>
+            <p>People read differently on the web, and a new writing genre designed to accommodate the reading habits of online
+                users has emerged. Given the low resolution of the computer screen and the awkwardness of the scrolling page,
+                many users find reading on-screen uncomfortable, and so they scan on-screen text and print pages for reading.
+            </p>
 
-            <p>Here we cover the concepts, principles, and processes for universal usability. Specific techniques for universal
-                usability are woven into context in the chapters that follow.</p>
+            <p>Web reading is also not a stationary activity. Users roam from page to page, collecting salient bits of information
+                from a variety of sources. They scan the contents of a page, get the information, and move on. Web reading
+                may also be disorienting because web pages, unlike book or magazine pages, can be accessed directly without
+                preamble.
+            </p>
+
+            <p>Too often web pages end up as isolated fragments of information, divorced from the larger context of their parent
+                sites through the lack of essential links and the failure to inform the user of their contents.</p>
+
+            <p>Web authors use hypertext links to create or supplement concepts: a list of related links can reinforce their
+                content or even serve as the focus of their site. The problem posed by links has little to do with the web
+                but is rooted in the concept of hypertext: Can the quick juxtaposition of two separate but conceptually related
+                pieces of information encourage a better understanding of the message? </p>
+
+            <p>A collection of links cannot create or sustain an argument or deliver a collection of facts as efficiently or
+                legibly as conventional linear prose. When there is no sustained narrative, users are sent aimlessly wandering
+                in their quest for information. Links also become a maintenance issue, because most web pages are ephemeral.
+                Broken links shake the user’s confidence in the validity and timeliness of content. Links should be used
+                sparingly and never as a substitute for real content.</p>
+            <h3>Chapter contents</h3>
+
+            <ul>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/9-editorial-style/2-structuring-prose.html">Structuring Your Prose</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/9-editorial-style/3-online-style.html">Online Style</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/9-editorial-style/4-rhetoric-and-web-design.html">Sidebar: Rhetoric and Web Design</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/9-editorial-style/5-web-text-formatting.html">Text Formatting for Web Documents</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/9-editorial-style/6-web-links.html">Links</a>
+                </li>
+            </ul>
+
         </div>
-        <div class="container" id="chap9">
-            <h1>2 Universal Usability</h1>
+        <br>
+        <div class="container li" id="list-item-10">
+            <h1>10 Forms and Applications</h1>
 
-            <blockquote>
-                To err is human, to forgive—design.
-                <br> —Andrew Dillon
+            <blockquote>Everything should be made as simple as possible, but not simpler.
+                <br> —
+                <a href="http://en.wikipedia.org/wiki/Albert_Einstein">Albert Einstein</a>
             </blockquote>
 
-            <p>Usability is a measure of effectiveness. It describes how effective tools and information sources are in helping
-                us accomplish tasks. The more usable the tool, the better we are able to achieve our goals. Many tools help
-                us overcome physical limitations by making us stronger, faster, and more sharp-sighted. But tools can be
-                frustrating or even disabling. When we encounter a tool that we cannot work with, either because it is poorly
-                designed or because its design does not take into account our needs, we are limited in what we can accomplish.</p>
+            <p>Web interaction today has moved beyond clicking hyperlinks and completing form fields to working with full-blown
+                web applications that provide a range of interactivity, including inline editing and drag-and-drop file management.
+                The web has become a two-way street, with users as both consumers and active participants. </p>
 
-            <p>In designing web sites our job is to reduce functional limitations through design. When we aim for
-                <em>universal</em> usability, we improve the quality of life for more people more of the time. On the web, we
-                can work toward universal usability by adopting a universal design approach to usability.</p>
+            <p>And as users take a more active role in web interactions, so demand increases for more dynamic graphical user
+                interfaces. In some ways, we are in the same phase with web interaction as we were with visual design a few
+                years ago: working around the limitations of the web environment by introducing new technologies and practices
+                that, though not universally supported and usable, allow for better methods for designing more usable interfaces.
+                And users have come to expect a certain level of sophistication in web interaction, greeting simple, link-driven
+                interaction designs with the same scorn as with first-generation, text-only web pages.</p>
 
-            <p>Here we cover the concepts, principles, and processes for universal usability. Specific techniques for universal
-                usability are woven into context in the chapters that follow.</p>
+            <p>We hope the coming years will bring the same technology growth and stabilization as we have enjoyed in the area
+                of visual design, which produced web standards, accessibility, and the separation of content and presentation
+                through the introduction and support of
+                <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets">Cascading Style Sheets</a>. In the meantime, we continue to favor well-supported technologies for designing
+                web forms and applications, with more advanced scripting serving only as an enhancement to standard modes
+                of interaction.</p>
+            <h3>Chapter contents</h3>
+
+            <ul>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/10-forms-and-applications/2-interaction-technologies.html">Technologies that Support Interaction</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/10-forms-and-applications/3-designing-web-applications.html">Designing Web Applications</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/10-forms-and-applications/4-design-process.html">The Design Process</a>
+                </li>
+            </ul>
         </div>
-        <div class="container" id="chap10">
-            <h1>2 Universal Usability</h1>
+        <br>
+        <div class="container li" id="list-item-11">
 
-            <blockquote>
-                To err is human, to forgive—design.
-                <br> —Andrew Dillon
+            <h1>11 Graphics</h1>
+
+            <blockquote>Good design is clear thinking made visible.
+                <br> —
+                <a href="http://en.wikipedia.org/wiki/Edward_Tufte">Edward Tufte</a>
             </blockquote>
 
-            <p>Usability is a measure of effectiveness. It describes how effective tools and information sources are in helping
-                us accomplish tasks. The more usable the tool, the better we are able to achieve our goals. Many tools help
-                us overcome physical limitations by making us stronger, faster, and more sharp-sighted. But tools can be
-                frustrating or even disabling. When we encounter a tool that we cannot work with, either because it is poorly
-                designed or because its design does not take into account our needs, we are limited in what we can accomplish.</p>
+            <p>Good diagrams and interesting illustrations are visually arresting and create documents that are distinct and
+                memorable. Illustrations can convey complex quantitative or spatial information quickly, transcending language
+                barriers, and combine with text to complement many styles of information gathering and learning. </p>
 
-            <p>In designing web sites our job is to reduce functional limitations through design. When we aim for
-                <em>universal</em> usability, we improve the quality of life for more people more of the time. On the web, we
-                can work toward universal usability by adopting a universal design approach to usability.</p>
+            <p>Personal computing and the rise of the Internet as a publishing medium have liberated information publishing
+                from physical constraints: new tools have increased our ability to create information graphics, and the web
+                provides a full-color multimedia medium unbounded by the costs of publishing and distributing paper. </p>
 
-            <p>Here we cover the concepts, principles, and processes for universal usability. Specific techniques for universal
-                usability are woven into context in the chapters that follow.</p>
+            <p>Our limits are now fewer and our tools are more powerful, but we still have to answer the same questions communicators
+                have always asked: What are the most effective uses of graphics, and what’s the best way to integrate words
+                and images into an understandable story for the user?</p>
+
+            <h3>Chapter contents</h3>
+
+            <ul>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/11-graphics/2-graphics-as-content.html">The Role of Web Graphics</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/11-graphics/3-information-graphics-origins.html">Sidebar: The Origins of Information Graphics</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/11-graphics/4-web-graphics.html">Characteristics of Web Graphics</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/11-graphics/5-web-graphics-formats.html">Graphics File Formats</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/11-graphics/6-imaging-strategies.html">Imaging Strategies</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/11-graphics/7-images-on-the-screen.html">Images on the Screen</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/11-graphics/8-web-graphics-markup.html">Graphics Markup</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/11-graphics/9-color-terminology.html">Sidebar: Color Terminology</a>
+                </li>
+            </ul>
         </div>
-        <div class="container" id="chap11">
-            <h1>2 Universal Usability</h1>
+        <br>
+        <div class="container li" id="list-item-12">
 
-            <blockquote>
-                To err is human, to forgive—design.
-                <br> —Andrew Dillon
+            <h1>12 Multimedia</h1>
+
+            <blockquote>If you want a golden rule that will fit everybody, this is it: Have nothing in your houses that you do not know
+                to be useful, or believe to be beautiful.
+                <br> —
+                <a href="http://en.wikipedia.org/wiki/William_Morris">William Morris</a>
             </blockquote>
 
-            <p>Usability is a measure of effectiveness. It describes how effective tools and information sources are in helping
-                us accomplish tasks. The more usable the tool, the better we are able to achieve our goals. Many tools help
-                us overcome physical limitations by making us stronger, faster, and more sharp-sighted. But tools can be
-                frustrating or even disabling. When we encounter a tool that we cannot work with, either because it is poorly
-                designed or because its design does not take into account our needs, we are limited in what we can accomplish.</p>
+            <p>A powerful aspect of computing technology is the ability to combine text, graphics, sounds, and moving images
+                in meaningful ways. The promise of multimedia has been slow to reach the web, primarily because of bandwidth
+                limitations. But in today’s web environment, multi- media is firmly established as a viable means for delivering
+                content. </p>
 
-            <p>In designing web sites our job is to reduce functional limitations through design. When we aim for
-                <em>universal</em> usability, we improve the quality of life for more people more of the time. On the web, we
-                can work toward universal usability by adopting a universal design approach to usability.</p>
+            <p>Although there are many methods for delivering web multimedia, we recommend using stable technology that works
+                for the great majority of client machines. You risk losing your audience if they have to jump through hoops
+                to access your content.</p>
 
-            <p>Here we cover the concepts, principles, and processes for universal usability. Specific techniques for universal
-                usability are woven into context in the chapters that follow.</p>
+            <h3>Chapter contents</h3>
+
+            <ul>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/12-multimedia/1-considerations.html">Considerations for Multimedia</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/12-multimedia/2-web-multimedia-strategies.html">Web Multimedia Strategies</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/12-multimedia/3-preparing-web-multimedia.html">Preparing Multimedia</a>
+                </li>
+                <li>
+                    <a href="http://webstyleguide.com/wsg3/12-multimedia/4-design-and-multimedia.html">Design and Multimedia</a>
+                </li>
+            </ul>
         </div>
-        <div class="container" id="chap12">
-            <h1>2 Universal Usability</h1>
-
-            <blockquote>
-                To err is human, to forgive—design.
-                <br> —Andrew Dillon
-            </blockquote>
-
-            <p>Usability is a measure of effectiveness. It describes how effective tools and information sources are in helping
-                us accomplish tasks. The more usable the tool, the better we are able to achieve our goals. Many tools help
-                us overcome physical limitations by making us stronger, faster, and more sharp-sighted. But tools can be
-                frustrating or even disabling. When we encounter a tool that we cannot work with, either because it is poorly
-                designed or because its design does not take into account our needs, we are limited in what we can accomplish.</p>
-
-            <p>In designing web sites our job is to reduce functional limitations through design. When we aim for
-                <em>universal</em> usability, we improve the quality of life for more people more of the time. On the web, we
-                can work toward universal usability by adopting a universal design approach to usability.</p>
-
-            <p>Here we cover the concepts, principles, and processes for universal usability. Specific techniques for universal
-                usability are woven into context in the chapters that follow.</p>
-        </div>
+        <br>
     </div>
+    <br>
     <footer class="bg-dark" style="color:white; padding-left:20px;">Noppadol Assavakamhaenghan Section 1 5988065
         <br>This is for education purpose only
     </footer>

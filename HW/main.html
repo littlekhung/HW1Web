@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>5988065</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" align="center">
+            <h1>Seach Youtube</h1>
+
+        </div>
+        <div class="row">
+            <div class="form-inline">
+                <div class="form-group mx-sm-1">
+                    <input class="form-control" id="search" type="text" placeholder="type here">
+                </div>
+                <button id="search-button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <ul class="list-group" id="result" style="width: 500px"></ul>
+
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#search-button").click(function () {
+                $("#result").html('');
+                $.get(
+                    "https://www.googleapis.com/youtube/v3/search", {
+                        part: "snippet",
+                        maxResults: "3",
+                        q: $("#search").val(),
+                        type: "video",
+                        key: "AIzaSyAQioDvzQU3zZJr-JAMXC7XitB_bTg78b0",
+                    },
+                    function (data) {
+                        console.log(data);
+                        var items = data.items;
+                        for (var i = 0; i < items.length; i++) {
+                            var title = items[i].snippet.title;
+                            var link = "https://www.youtube.com/embed/"+items[i].id.videoId;
+                            var codeLink = "<a href='"+link+"'>"+link+"</a>"
+                            var img = items[i].snippet.thumbnails.default.url;
+                            var codeImg = "<img class='myimg' src='"+img+"'></img>"
+                            $("#result").append("<li class='list-group-item'>Title: " + title+"<br>"+codeImg+"<br>URL: "+codeLink + "</li>");
+                        }
+                    }
+                )
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <style>
+        .myimg{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</body>
+
+</html>

@@ -27,36 +27,47 @@
     </div>
     <script>
         $(document).ready(function () {
+            $("#search").bind("enterKey", function (e) {
+                search();
+            });
+            $("#search").keyup(function (e) {
+                if (e.keyCode == 13) {
+                    $(this).trigger("enterKey");
+                }
+            });
             $("#search-button").click(function () {
-                $("#result").html('');
-                $.get(
-                    "https://www.googleapis.com/youtube/v3/search", {
-                        part: "snippet",
-                        maxResults: "3",
-                        q: $("#search").val(),
-                        type: "video",
-                        key: "AIzaSyAQioDvzQU3zZJr-JAMXC7XitB_bTg78b0",
-                    },
-                    function (data) {
-                        console.log(data);
-                        var items = data.items;
-                        for (var i = 0; i < items.length; i++) {
-                            var title = items[i].snippet.title;
-                            var link = "https://www.youtube.com/embed/"+items[i].id.videoId;
-                            var codeLink = "<a href='"+link+"'>"+link+"</a>"
-                            var img = items[i].snippet.thumbnails.default.url;
-                            var codeImg = "<img class='myimg' src='"+img+"'></img>"
-                            $("#result").append("<li class='list-group-item'>Title: " + title+"<br>"+codeImg+"<br>URL: "+codeLink + "</li>");
-                        }
-                    }
-                )
+                search();
             });
         });
+        function search() {
+            $("#result").html('');
+            $.get(
+                "https://www.googleapis.com/youtube/v3/search", {
+                    part: "snippet",
+                    maxResults: "3",
+                    q: $("#search").val(),
+                    type: "video",
+                    key: "AIzaSyAQioDvzQU3zZJr-JAMXC7XitB_bTg78b0",
+                },
+                function (data) {
+                    console.log(data);
+                    var items = data.items;
+                    for (var i = 0; i < items.length; i++) {
+                        var title = items[i].snippet.title;
+                        var link = "https://www.youtube.com/embed/" + items[i].id.videoId;
+                        var codeLink = "<a href='" + link + "'>" + link + "</a>"
+                        var img = items[i].snippet.thumbnails.default.url;
+                        var codeImg = "<img class='myimg' src='" + img + "'></img>"
+                        $("#result").append("<li class='list-group-item'>Title: " + title + "<br>" + codeImg + "<br>URL: " + codeLink + "</li>");
+                    }
+                }
+            )
+        }
     </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
         crossorigin="anonymous">
     <style>
-        .myimg{
+        .myimg {
             width: 100px;
             height: 100px;
         }
